@@ -4,6 +4,9 @@ Docker compose wrapper for [jwilder/nginx-proxy](https://github.com/jwilder/ngin
 ## Clone
 `git clone https://github.com/DuckThom/nginx-proxy proxy`
 
+## Setup
+`jwilder/nginx-proxy` settings and options can be found [here](https://github.com/jwilder/nginx-proxy/blob/master/README.md)
+
 ## Connect other containers
 ```
 version: '2'
