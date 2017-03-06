@@ -1,0 +1,1 @@
+# This file will be used on any virtual host which does not have a /etc/nginx/vhost.d/{VIRTUAL_HOST} file associated with it.

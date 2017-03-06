@@ -2,12 +2,14 @@ version: '2'
 
 services:
     app:
-        build: build
+        image: jwilder/nginx-proxy
         restart: always
         container_name: nginx-proxy
         volumes:
             - ~/.certs/:/etc/nginx/certs # Certificates for containers that require a HTTPS connection go here
             - /var/run/docker.sock:/tmp/docker.sock:ro
+            - ./conf.d/:/etc/nginx/conf.d # Proxy wide overrides
+            - ./vhost.d/:/etc/nginx/vhost.d # Vhost specific overrides
         ports:
             - '80:80'
             - '443:443'
